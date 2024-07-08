@@ -1,4 +1,4 @@
-'use client'
+"use client"
 
 import { tokenProvider } from '@/actions/steam.actions';
 import Loader from '@/components/ui/Loader';
@@ -10,7 +10,7 @@ import {
 
 import { ReactNode, useEffect, useState } from 'react';
   
-  const apiKey = 'process.env.NEXT_PUBLIC_API_KEY';
+  const apiKey = process.env.NEXT_PUBLIC_STREAM_API_KEY;
 //   const userId = 'user-id';
 //   const token = 'authentication-token';
 //   const user: User = { id: userId };

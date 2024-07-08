@@ -3,7 +3,7 @@ import MeetingTypeList from '@/components/ui/MeetingTypeList';
 const Home = () => {
   const now = new Date();
 
-  const time = now.toLocaleTimeString('en-US', {hour: "2-digit", minute: "2-digit" });
+  const time = now.toLocaleTimeString('en-US', {hour: "2-digit", minute: "2-digit"});
   const date = (new Intl.DateTimeFormat('en-US', {dateStyle: 'full'})).format(now);
 
 
@@ -17,10 +17,10 @@ const Home = () => {
           </h2>
 
           <div className='flex flex-col gap-2'>
-               <h1 className='text-4xl font-extrabold lg:text-7xl'>
+               <h2 className='text-3xl font-extrabold lg:text-5xl'>
                 {time}
-               </h1>
-               <p className='text-lg font-medium text-sky-1 lg:text-2xl'>
+               </h2>
+               <p className='text-lg font-medium text-sky-1 lg:text-lg'>
                 {date}
                </p>
           </div>
