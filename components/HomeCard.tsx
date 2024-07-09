@@ -13,12 +13,12 @@ interface HomeCardProps {
 const HomeCard = ({classname, img, title, description, handleClick}: HomeCardProps) => {
   return (
     <div className={cn('px-4 py-6 flex flex-col justify-between w-full xl:max-w-[270px] min-h-[260px] rounded-[14px] cursor-pointer', classname)} onClick={handleClick}>
-            <div className='flex-center glassmorphism size-12 rounded-[10px]'>
+            <div className='flex-center glassmorphism size-9 rounded-[10px]'>
                 <Image 
                     src={img}
                     alt='meeting'
-                    width={27}
-                    height={27}
+                    width={20}
+                    height={20}
                 />
             </div>
 

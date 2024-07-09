@@ -1,6 +1,6 @@
 "use client"
 
-import { tokenProvider } from '@/actions/steam.actions';
+import { tokenProvider } from '@/actions/stream.actions';
 import Loader from '@/components/ui/Loader';
 import { useUser } from '@clerk/nextjs';
 import {
