@@ -22,7 +22,7 @@ const SignUpPage = () => {
             className='max-w-full h-auto opacity-95 max-md:hidden max-lg:hidden'
           />
         </div>
-        
+
       </div>
     </main>
   )

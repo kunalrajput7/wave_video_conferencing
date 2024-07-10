@@ -32,18 +32,18 @@ const MeetingModal = ({ isOpen, onClose, title, className, children, handleClick
                 <div className='flex flex-col gap-6'>
                     {image && (
                         <div className='flex justify-center'>
-                            <Image src={image} alt='image' width={72} height={72}/>
+                            <Image src={image} alt='image' width={72} height={72} />
                         </div>
                     )}
                     <h3 className={cn('text-3xl font-bold leading-[42px]', className)}>{title}</h3>
                     {children}
                     <Button className='bg-blue-1 focus-visible:ring-0 focus-visible:ring-offset-0' onClick={handleClick}>
                         {buttonIcon && (
-                            <Image src={buttonIcon} alt='button icon' width={13} height={13}/>
+                            <Image src={buttonIcon} alt='button icon' width={13} height={13} />
                         )} &nbsp;
                         {buttonText || 'Scedule Meeting'}
                     </Button>
-                </div>               
+                </div>
             </DialogContent>
         </Dialog>
     )

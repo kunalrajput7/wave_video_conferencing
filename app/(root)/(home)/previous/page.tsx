@@ -7,7 +7,7 @@ const Previous = () => {
         Previous Meetings
       </h1>
 
-      <CallList type='ended'/>
+      <CallList type='ended' />
     </section>
   )
 }

@@ -10,6 +10,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { useToast } from './ui/use-toast';
 import { Textarea } from './ui/textarea';
 import ReactDatePicker from 'react-datepicker';
+import { Input } from './ui/input';
 
 
 const MeetingTypeList = () => {
@@ -106,7 +107,7 @@ const MeetingTypeList = () => {
                     title="Create Meeting"
                     handleClick={createMeeting}
                 >
-                    
+
 
                     <div className='flex flex-col gap2.5'>
                         <label className='text-base text-normal leading-[22px] text-sky-2'>
@@ -132,8 +133,9 @@ const MeetingTypeList = () => {
                             showTimeSelect
                             timeFormat='HH:mm'
                             timeIntervals={15}
-                            timeCaption='MMMM d, yyyy h:mm a'
-                            className='w-full rounded bg-dark-3 p-2 focus:outline-none'
+                            timeCaption="time"
+                            dateFormat="MMMM d, yyyy h:mm aa"
+                            className="w-full rounded bg-dark-3 p-2 focus:outline-none"
                         />
                     </div>
                 </MeetingModal>
@@ -145,7 +147,7 @@ const MeetingTypeList = () => {
                     className='text-center'
                     handleClick={() => {
                         navigator.clipboard.writeText(meetingLink);
-                        toast({title: 'Link Copied'});
+                        toast({ title: 'Link Copied' });
                     }}
                     image='/icons/checked.svg'
                     buttonIcon='/icons/copy.svg'
@@ -161,6 +163,21 @@ const MeetingTypeList = () => {
                 buttonText="Start Meeting"
                 handleClick={createMeeting}
             />
+
+            <MeetingModal
+                isOpen={meetingState === 'isJoiningMeeting'}
+                onClose={() => setMeetingState(undefined)}
+                title="Paste the link here"
+                className='text-center'
+                buttonText="Join Meeting"
+                handleClick={() => router.push(values.link)}
+            >
+                <Input
+                    placeholder='Meeting Link'
+                    className='border-none bg-dark-3 focus-visible:ring-0 focus-visible:ring-offset-0'
+                    onChange={(e) => setValues({ ...values, link: e.target.value })}
+                />
+            </MeetingModal>
 
         </section>
     )

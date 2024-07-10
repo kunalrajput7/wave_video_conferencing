@@ -83,7 +83,7 @@
 .cl-socialButtonsBlockButton__google,
 .cl-socialButtonsBlockButton__google span,
 .cl-socialButtonsBlockButton__google img {
-  fill: white !important;  /* Change icon color to white */
+  fill: white !important; /* Change icon color to white */
   color: black !important;
   background: white !important; /* Change text color to white */
 }
@@ -91,12 +91,10 @@
 .cl-socialButtonsBlockButton__apple,
 .cl-socialButtonsBlockButton__apple span,
 .cl-socialButtonsBlockButton__apple img {
-  fill: white !important;  /* Change icon color to white */
+  fill: white !important; /* Change icon color to white */
   color: black !important;
   background: white !important; /* Change text color to white */
 }
-
-
 
 /* =============================== */
 
